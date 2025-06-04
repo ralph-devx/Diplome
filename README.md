@@ -19,8 +19,6 @@
 - работа с офисами (crud)
 
 
-
-
 ### 2. frontend
 - React (typescript)
 - Konva Canvas (интерактивная карта (пока прототип сделан))
