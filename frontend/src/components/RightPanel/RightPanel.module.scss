@@ -1,0 +1,23 @@
+.rp {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 10px 11px 10px 12px;
+
+  &__img {
+    border: 0.10px solid var(--gray2);
+    border-radius: 100%;
+  }
+
+  &__exit {
+    &-svg {
+      width: 28px;
+      height: 25px;
+      fill: none;
+
+      &-path {
+        fill: var(--red);
+      }
+    }
+  }
+}

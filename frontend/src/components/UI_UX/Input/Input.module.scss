@@ -1,0 +1,28 @@
+.input {
+  padding: 23px 15px;
+  border-radius: 10px;
+  border: 0;
+  width: 100%;
+  font-weight: 400;
+  font-size: 16px;
+  color: var(--cwhite);
+  background-color: #383232;
+  outline: none;
+  transition: background-color .07s var(--transition-timing);
+
+  &::placeholder {
+    font-weight: 400;
+    font-size: 16px;
+    color: #b3a2a2;
+  }
+
+  &:focus-visible {
+    background-color: #494141;
+  }
+
+  @media (min-width: 1025px) {
+    &:hover {
+      background-color: #322d2d;
+    }
+  }
+}

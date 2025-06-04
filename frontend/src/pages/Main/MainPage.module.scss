@@ -1,0 +1,35 @@
+.main-page {
+  &__select-office {
+    margin-bottom: 30px;
+    width: 24%;
+  }
+
+  &__content {
+    display: flex;
+    width: 100%;
+  }
+
+  &__floors {
+    display: flex;
+    //flex-direction: column;
+    gap: 10px 0;
+  }
+  
+  &__floor {
+    //className={cn('btn-reset', styles['main-page__floor'])}
+    background-color: #fff;
+  }
+
+  &__konva {
+    position: relative;
+    border-radius: 10px;
+    //width: 100%;
+    width: 70%;
+    height: 70%;
+    background-color: #1d1d1d;
+  }
+}
+
+//.konvajs-content {
+//  width: 100% !important;
+//}

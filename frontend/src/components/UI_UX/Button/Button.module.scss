@@ -1,0 +1,28 @@
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  border-radius: 10px;
+  padding: 10px 15px;
+  width: fit-content;
+  font-weight: 500;
+  font-size: 18px;
+  color: var(--cwhite);
+  background-color: var(--blue);
+  transition: background-color .07s var(--transition-timing);
+
+  &:focus-visible {
+    background-color: var(--cfocus);
+  }
+
+  @media (min-width: 1025px) {
+    &:hover {
+      background-color: var(--chover);
+    }
+  }
+
+  &:active {
+    background-color: var(--cactive);
+  }
+}
