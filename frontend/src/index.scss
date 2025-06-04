@@ -1,0 +1,299 @@
+html {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: inherit;
+  -moz-box-sizing: inherit;
+  box-sizing: inherit;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+  -webkit-tap-highlight-color: transparent;
+}
+
+img {
+  max-width: 100%;
+}
+
+
+
+/* ======================================= */
+
+@font-face {
+  font-family: 'Montserrat';
+  src: local('Montserrat-Regular'),
+  url('./assets/fonts/Montserrat-Regular.woff2') format('woff2'),
+  url('./assets/fonts/Montserrat-Regular.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  src: local('Montserrat-Medium'),
+  url('./assets/fonts/Montserrat-Medium.woff2') format('woff2'),
+  url('./assets/fonts/Montserrat-Medium.woff') format('woff');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* ======================================= */
+
+
+
+/* ===== glob ===== */
+:root {
+  --container-width: 1440px;
+  --container-offset: 15px;
+
+  --font: "Montserrat", sans-serif;
+
+  --cblack: #000;
+  --cwhite: #fff;
+  --cod: #f8f8f8;
+  --cbg: #202020;
+  --cbg2: #242424;
+  --cbg3: #121212;
+  --gray: #989898;
+  --gray2: #d9d9d9;
+  --blue: #003cff;
+  --red: #ff0000;
+  --shark: #25262c;
+
+  --cfocus: #688dff;
+  --chover: #1135a8;
+  --cactive: #0022a5;
+  //--os-handle-bg: #fff !important;
+
+  --f18: 18px;
+
+  --transition-timing: cubic-bezier(0.61, 1, 0.88, 1); // cubic-bezier(0.25, 1, 0.5, 1)
+}
+
+.layout-page {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  min-width: 320px;
+  min-height: 100%;
+  font-family: var(--font);
+  font-weight: 400;
+  //background-color: var(--cbg);
+  background-color: rgb(18, 18, 18);
+  overflow-x: hidden;
+}
+
+.layout {
+  display: flex;
+  //flex-direction: column;
+  width: 100vw;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+.main {
+  flex-grow: 1;
+  //padding-top: 50px;
+  width: 100%;
+}
+
+.container {
+  max-width: var(--container-width);
+  margin: 0 auto;
+  padding: 0 var(--container-offset);
+}
+
+
+
+.list-reset {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.btn-reset {
+  padding: 0;
+  border: none;
+  outline: 0;
+  background-color: transparent;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+  -webkit-tap-highlight-color: transparent;
+}
+
+.btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0.3vw;
+  padding: 0.573vw 1.25vw 0.573vw 1.25vw;
+  outline: none;
+
+  word-break: break-word;
+  text-align: center;
+  font-weight: 700;
+  font-size: var(--f23);
+  line-height: 110%;
+  color: var(--white);
+
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+
+  background-color: var(--blue);
+
+  &_picton {
+    background-color: var(--picton);
+  }
+}
+
+//focus-hover-active
+.fha {
+  &-btn {
+    transition:
+      background-color .07s ease-in-out,
+      color .07s ease-in-out,
+      border-color .07s ease-in-out;
+
+    &:focus-visible {
+      background-color: var(--cfocus);
+    }
+
+    @media (min-width: 1025px) {
+      &:hover {
+        background-color: var(--chover);
+      }
+    }
+
+    &:active {
+      background-color: var(--cactive);
+    }
+
+    &-white {
+      transition: background-color .07s ease-in-out;
+
+      &:focus-visible {
+        background-color: #676666;
+      }
+
+      @media (min-width: 1025px) {
+        &:hover {
+          background-color: #93939f;
+        }
+      }
+
+      &:active {
+        background-color: #676666;
+      }
+    }
+  }
+
+  &-color {
+    transition: color .07s ease-in-out;
+
+    &:focus-visible {
+      color: var(--cfocus);
+    }
+
+    @media (min-width: 1025px) {
+      &:hover {
+        color: var(--chover);
+      }
+    }
+
+    &:active {
+      color: var(--cactive);
+    }
+
+    &-white {
+      transition: color .07s ease-in-out;
+
+      &:focus-visible {
+        color: #676666;
+      }
+
+      @media (min-width: 1025px) {
+        &:hover {
+          color: #93939f;
+        }
+      }
+
+      &:active {
+        color: #676666;
+      }
+    }
+  }
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  font-family: var(--font);
+  color: var(--ctext);
+  background-color: var(--cbg);
+
+  &.modal-open {
+    overflow: hidden;
+    touch-action: none;
+
+    /* Предотвращение скачков контента */
+    padding-right: calc(100vw - 100%);
+  }
+}
+
+/* Анимации */
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+    background-color: rgba(0, 0, 0, 0.2);
+  }
+}
+
+@keyframes slideUp {
+  0% {
+    transform: translateY(30px);
+    opacity: 0;
+  }
+  70% {
+    transform: translateY(-5px);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+
+.list-reset {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+
+.os-scrollbar-handle {
+  background: var(--cwhite);
+
+  @media (min-width: 1025px) {
+    &:hover {
+      background: #aeaeae;
+    }
+  }
+}

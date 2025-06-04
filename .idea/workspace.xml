@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="cc090460-70da-4693-8e74-1307373544ab" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/diplome.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/jsLinters/eslint.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/watcherTasks.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/backend/.development.env" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/backend/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/backend/.prettierrc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/backend/.production.env" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/backend/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/backend/SequalizeFolder/config/config.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/backend/SequalizeFolder/migrations/20250525042733-add-new-column.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/backend/SequalizeFolder/migrations/20250528050733-add-name-surname.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/backend/SequalizeFolder/models/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/backend/nest-cli.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/backend/package-lock.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/backend/package.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/backend/src/app.module.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/backend/src/auth/auth.controller.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/backend/src/auth/auth.module.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/backend/src/auth/auth.service.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/backend/src/auth/dto/auth.dto.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/backend/src/auth/jwt-auth.guard.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/backend/src/auth/roles-auth.decorator.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/backend/src/auth/roles.guard.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/backend/src/booking/booking.controller.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/backend/src/booking/booking.model.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/backend/src/booking/booking.module.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/backend/src/booking/booking.service.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/backend/src/booking/dto/create-booking.dto.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/backend/src/main.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/backend/src/offices/dto/create-floor.dto.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/backend/src/offices/dto/create-office.dto.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/backend/src/offices/dto/create-workplace.dto.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/backend/src/offices/floor.model.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/backend/src/offices/office.model.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/backend/src/offices/offices.controller.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/backend/src/offices/offices.module.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/backend/src/offices/offices.service.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/backend/src/offices/workplace.model.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/backend/src/users/dto/create-user.dto.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/backend/src/users/dto/update-user.dto.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/backend/src/users/users.controller.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/backend/src/users/users.model.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/backend/src/users/users.module.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/backend/src/users/users.service.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/backend/test/app.e2e-spec.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/backend/test/jest-e2e.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/backend/tsconfig.build.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/backend/tsconfig.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/eslint.config.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/package-lock.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/package.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/public/vite.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/assets/authbg.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/assets/fonts/Montserrat-Medium.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/assets/fonts/Montserrat-Medium.woff2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/assets/fonts/Montserrat-Regular.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/assets/fonts/Montserrat-Regular.woff2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/assets/logo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/assets/office-plan.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/assets/office-plan2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/assets/react.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/assets/user-img.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/components/KonvaCanvaces/CanvasUser/CanvasUser.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/components/KonvaCanvaces/CanvasUser/KonvaCanvas.module.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/components/KonvaCanvaces/CanvasUser/KonvaCanvas.props.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/components/KonvaCanvaces/CanvasUser/testKonvaCanvas.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/components/LeftPanel/LeftPanel.module.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/components/LeftPanel/LeftPanel.props.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/components/LeftPanel/LeftPanel.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/components/Modals/CreateEmployee/CreateEmployee.module.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/components/Modals/CreateEmployee/CreateEmployee.props.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/components/Modals/CreateEmployee/CreateEmployee.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/components/Modals/ModalBasis/ModalBasis.module.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/components/Modals/ModalBasis/ModalBasis.props.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/components/Modals/ModalBasis/ModalBasis.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/components/RightPanel/RightPanel.module.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/components/RightPanel/RightPanel.props.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/components/RightPanel/RightPanel.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/components/UI_UX/Button/Button.module.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/components/UI_UX/Button/Button.props.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/components/UI_UX/Button/Button.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/components/UI_UX/Input/Input.module.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/components/UI_UX/Input/Input.props.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/components/UI_UX/Input/Input.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/components/UI_UX/Select/Select.module.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/components/UI_UX/Select/Select.props.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/components/UI_UX/Select/Select.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/components/UI_UX/SelectOffice/DoubleSelect.module.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/components/UI_UX/SelectOffice/DoubleSelectProps.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/components/UI_UX/SelectOffice/SelectOffice.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/components/UI_UX/SelectOffice/itc-select.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/helpers/NoRequireAuth/NoRequireAuth.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/helpers/RequireAdminRole/RequireAdminRole.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/helpers/RequireAuth/RequireAuth.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/index.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/layouts/AuthLayout/AuthLayout.module.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/layouts/AuthLayout/AuthLayout.props.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/layouts/AuthLayout/AuthLayout.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/layouts/General/GeneralLayout.module.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/layouts/General/GeneralLayout.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/main.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/networking/http/index.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/networking/models/IBooking.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/networking/models/IFloor.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/networking/models/IOffice.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/networking/models/IUser.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/networking/models/IWorkplace.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/networking/models/response/AuthResponse.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/networking/services/AuthService.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/networking/services/BookingService.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/networking/services/OfficesService.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/networking/services/UsersService.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/normalize.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/pages/AdminPage/AdminPage.module.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/pages/AdminPage/AdminPage.props.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/pages/AdminPage/AdminPage.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/pages/AdminPage/Employee/Employee.module.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/pages/AdminPage/Employee/Employee.props.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/pages/AdminPage/Employee/Employee.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/pages/AdminPage/Offices/Offices.module.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/pages/AdminPage/Offices/Offices.props.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/pages/AdminPage/Offices/Offices.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/pages/AuthPage/AuthPage.module.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/pages/AuthPage/AuthPage.props.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/pages/AuthPage/AuthPage.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/pages/Main/MainPage.module.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/pages/Main/MainPage.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/store/store.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/vite-env.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/tsconfig.app.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/tsconfig.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/tsconfig.node.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/vite.config.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/iqnix-reserve.drawio" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JSX File2.0" />
+        <option value="SCSS 2.0" />
+        <option value="ReactTsComponent..child.0" />
+        <option value="ReactTsComponent..child.1" />
+        <option value="ReactTsComponent..child.2" />
+        <option value="ReactTsComponent" />
+        <option value="TypeScript JSX File" />
+        <option value="TypeScript File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 3
+}</component>
+  <component name="ProjectId" id="2uCjIaKbM9tjHhFP8BoQbDfKVwx" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "dev",
+    "ignore.virus.scanning.warn.message": "true",
+    "last_opened_file_path": "D:/IT/IT/PROJECTS/diplome/frontend/src/components/UI_UX/Select",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.standard": "true",
+    "node.js.detected.package.stylelint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.standard": "",
+    "node.js.selected.package.stylelint": "",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "project.propVCSSupport.DirectoryMappings",
+    "ts.external.directory.path": "D:\\IT\\IT\\PROJECTS\\diplome\\backend\\node_modules\\typescript\\lib",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\IT\IT\PROJECTS\diplome\frontend\src\components\UI_UX\Select" />
+      <recent name="D:\IT\IT\PROJECTS\diplome\frontend\src\assets" />
+      <recent name="D:\IT\IT\PROJECTS\diplome\frontend\src\helpers" />
+      <recent name="D:\IT\IT\PROJECTS\diplome\backend\src\auth" />
+      <recent name="D:\IT\IT\PROJECTS\diplome\src\assets" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\IT\IT\PROJECTS\diplome\frontend\src\components\KonvaCanvaces" />
+      <recent name="D:\IT\IT\PROJECTS\diplome\frontend\src\helpers\RequireAdminRole" />
+      <recent name="D:\IT\IT\PROJECTS\diplome\frontend\src\networking" />
+      <recent name="D:\IT\IT\PROJECTS\diplome\backend\SequalizeFolder" />
+      <recent name="D:\IT\IT\PROJECTS\diplome\backend\src\old" />
+    </key>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-js-predefined-1d06a55b98c1-0b3e54e931b4-JavaScript-WS-241.19416.2" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="cc090460-70da-4693-8e74-1307373544ab" name="Changes" comment="" />
+      <created>1741759371090</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1741759371090</updated>
+      <workItem from="1741759373084" duration="2953000" />
+      <workItem from="1741836261229" duration="975000" />
+      <workItem from="1741838860785" duration="5628000" />
+      <workItem from="1746625749412" duration="132000" />
+      <workItem from="1747024981701" duration="5485000" />
+      <workItem from="1747116535873" duration="7853000" />
+      <workItem from="1747548562433" duration="6948000" />
+      <workItem from="1747632242815" duration="5689000" />
+      <workItem from="1747713045760" duration="2778000" />
+      <workItem from="1747802396916" duration="4941000" />
+      <workItem from="1747971404356" duration="3912000" />
+      <workItem from="1748060528178" duration="741000" />
+      <workItem from="1748061284192" duration="7524000" />
+      <workItem from="1748145587445" duration="17815000" />
+      <workItem from="1748235480391" duration="5820000" />
+      <workItem from="1748269587643" duration="2388000" />
+      <workItem from="1748272031513" duration="3136000" />
+      <workItem from="1748317469307" duration="2958000" />
+      <workItem from="1748356956382" duration="4050000" />
+      <workItem from="1748406972021" duration="2615000" />
+      <workItem from="1748491014029" duration="19699000" />
+      <workItem from="1748579690532" duration="7930000" />
+      <workItem from="1748666779587" duration="24520000" />
+      <workItem from="1748750175212" duration="6255000" />
+      <workItem from="1748773383894" duration="7703000" />
+      <workItem from="1748831577019" duration="10009000" />
+      <workItem from="1748923211960" duration="5312000" />
+      <workItem from="1748941319547" duration="12625000" />
+      <workItem from="1749010887738" duration="22628000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>

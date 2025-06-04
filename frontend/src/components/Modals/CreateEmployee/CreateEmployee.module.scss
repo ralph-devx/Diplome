@@ -1,0 +1,35 @@
+.ce {
+  &__title {
+    margin: 0;
+    margin-bottom: 30px;
+    font-weight: 500;
+    font-size: 18px;
+    color: var(--cwhite);
+    text-align: center;
+  }
+
+  &__selects {
+    display: flex;
+    justify-content: space-between;
+    //gap: 0 15px;
+    margin-bottom: 15px;
+    width: 100%;
+  }
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px 0;
+    width: 100%;
+  }
+
+  &__actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 0 15px;
+  }
+
+  &__cancel {
+    background-color: var(--red);
+  }
+}

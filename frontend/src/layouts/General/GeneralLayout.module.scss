@@ -1,0 +1,29 @@
+.layout-page {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  min-width: 320px;
+  min-height: 100%;
+  font-family: var(--font);
+  font-weight: 400;
+  //background-color: var(--cbg);
+  background-color: rgb(18, 18, 18);
+  overflow-x: hidden;
+}
+
+.layout {
+  display: flex;
+  //flex-direction: column;
+  width: 100vw;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+.main {
+  flex-grow: 1;
+  margin: 10px 0 10px 0;
+  padding: 30px;
+  border-radius: 16px;
+  width: 100%;
+  background-color: #060606;
+}
