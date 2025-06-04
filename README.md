@@ -6,8 +6,9 @@
 - postgresql (pgAdmin 4 нужно скачать [**по этой инструкции**](https://metanit.com/sql/postgresql/1.1.php))
 
 #### Для запуска сервера
-1. cd backend
-2. npm run start:dev
+1. npm i
+2. cd backend
+3. npm run start:dev
 
 #### Сделано
 - [Документация](http://localhost:5000/api/docs#/) (*клик*)
@@ -18,16 +19,15 @@
 - работа с офисами (crud)
 
 
-
-
 ### 2. frontend
 - React (typescript)
 - Konva Canvas (интерактивная карта (пока прототип сделан))
 - Mobx
 
 #### Для запуска
-1. cd frontend
-2. npm run dev
+1. npm i
+2. cd frontend
+3. npm run dev
 
 #### Сделано
 - вёрстка, но без адаптива
