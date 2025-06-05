@@ -9,3 +9,6 @@ export interface IOffice {
   createdAt?: string;
   updatedAt?: string;
 }
+
+
+export interface ICreateOffice extends Omit<IOffice, 'id' | 'createdAt' | 'updatedAt'> {}

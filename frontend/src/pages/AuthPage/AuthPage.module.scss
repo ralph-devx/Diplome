@@ -90,7 +90,9 @@
     color: var(--gray);
   }
 
-  //&__submit {
+  &__submit {
+    padding: 15px 10px;
+    width: 100%;
   //  border-radius: 10px;
   //  padding: 15px 10px;
   //  width: 100%;
@@ -98,5 +100,5 @@
   //  font-size: 18px;
   //  color: var(--cwhite);
   //  background-color: var(--blue);
-  //}
+  }
 }

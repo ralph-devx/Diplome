@@ -17,6 +17,7 @@
   width: 100vw;
   min-height: 100vh;
   overflow-x: hidden;
+  overflow-y: hidden;
 }
 
 .main {
@@ -25,5 +26,7 @@
   padding: 30px;
   border-radius: 16px;
   width: 100%;
+  max-height: 98vh;
   background-color: #060606;
+  overflow-y: auto;
 }
