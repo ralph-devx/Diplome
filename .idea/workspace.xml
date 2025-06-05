@@ -6,7 +6,16 @@
   <component name="ChangeListManager">
     <list default="true" id="cc090460-70da-4693-8e74-1307373544ab" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/index.scss" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/index.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/layouts/General/GeneralLayout.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/layouts/General/GeneralLayout.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/networking/models/IFloor.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/networking/models/IFloor.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/networking/models/IOffice.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/networking/models/IOffice.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/networking/models/IWorkplace.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/networking/models/IWorkplace.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/networking/services/OfficesService.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/networking/services/OfficesService.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/pages/AdminPage/Offices/Offices.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/pages/AdminPage/Offices/Offices.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/pages/AdminPage/Offices/Offices.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/pages/AdminPage/Offices/Offices.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/pages/AuthPage/AuthPage.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/pages/AuthPage/AuthPage.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/pages/AuthPage/AuthPage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/pages/AuthPage/AuthPage.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,26 +47,26 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "dev",
-    "ignore.virus.scanning.warn.message": "true",
-    "last_opened_file_path": "D:/IT/IT/PROJECTS/diplome/frontend/src/components/UI_UX/Select",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.standard": "true",
-    "node.js.detected.package.stylelint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.standard": "",
-    "node.js.selected.package.stylelint": "",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "project.propVCSSupport.DirectoryMappings",
-    "ts.external.directory.path": "D:\\IT\\IT\\PROJECTS\\diplome\\backend\\node_modules\\typescript\\lib",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;dev&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/IT/IT/PROJECTS/diplome/frontend/src/components/UI_UX/Select&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.standard&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.stylelint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.standard&quot;: &quot;&quot;,
+    &quot;node.js.selected.package.stylelint&quot;: &quot;&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;project.propVCSSupport.DirectoryMappings&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;D:\\IT\\IT\\PROJECTS\\diplome\\backend\\node_modules\\typescript\\lib&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\IT\IT\PROJECTS\diplome\frontend\src\components\UI_UX\Select" />
@@ -117,7 +126,8 @@
       <workItem from="1748831577019" duration="10009000" />
       <workItem from="1748923211960" duration="5312000" />
       <workItem from="1748941319547" duration="12625000" />
-      <workItem from="1749010887738" duration="22894000" />
+      <workItem from="1749010887738" duration="26273000" />
+      <workItem from="1749095661517" duration="2189000" />
     </task>
     <servers />
   </component>

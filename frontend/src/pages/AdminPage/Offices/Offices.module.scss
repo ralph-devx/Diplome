@@ -1,0 +1,22 @@
+.offices {
+  &__crof {
+    display: flex;
+    flex-direction: column;
+    width: 25%;
+  }
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px 0;
+    width: 100%;
+  }
+
+  &__subtitle {
+    margin: 0;
+    margin-bottom: 15px;
+    font-weight: 500;
+    font-size: 24px;
+    color: #fff;
+  }
+}

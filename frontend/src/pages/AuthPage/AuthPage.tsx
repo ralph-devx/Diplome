@@ -1,6 +1,6 @@
+import Button from '../../components/UI_UX/Button/Button.tsx';
 import styles from './AuthPage.module.scss';
 import cn from 'classnames';
-import Button from '../../components/UI_UX/Button/Button.tsx';
 import Input from '../../components/UI_UX/Input/Input.tsx';
 import { FormEvent, useContext, useState } from 'react';
 // import AuthService from '../../networking/services/AuthService.ts';

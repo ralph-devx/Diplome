@@ -7,3 +7,6 @@ export interface IWorkplace {
   createdAt?: string;
   updatedAt?: string;
 }
+
+
+export interface ICreateWorkplace extends Omit<IWorkplace, 'id' | 'createdAt' | 'updatedAt'> {}
