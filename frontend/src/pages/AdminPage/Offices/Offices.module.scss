@@ -1,22 +1,173 @@
 .offices {
-  &__crof {
+  &__offices {
     display: flex;
-    flex-direction: column;
+    align-items: center;
+    gap: 0 15px;
+    margin-bottom: 30px;
+  }
+
+  &__edit {
+    background-color: var(--cbg);
+
+    &-icon {
+      width: 15px;
+      height: 15px;
+
+      &-fill {
+        fill: var(--cwhite);
+      }
+    }
+  }
+
+  &__select {
     width: 25%;
   }
 
-  &__form {
-    display: flex;
-    flex-direction: column;
-    gap: 10px 0;
-    width: 100%;
+  &__loading {
+    margin: 0;
+    font-size: 20px;
+    color: var(--cwhite);
   }
 
-  &__subtitle {
-    margin: 0;
-    margin-bottom: 15px;
-    font-weight: 500;
-    font-size: 24px;
-    color: #fff;
+  &__floors {
+    position: relative;
+    display: flex;
+    gap: 0 3px;
+    padding-left: 15px;
+  }
+
+  &__floor {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 3px 15px;
+    border-radius: 5px 5px 0 0;
+    min-width: 5%;
+    background-color: #5e5656;
+    color: var(--cwhite);
+    transition: background-color .07s var(--transition-timing);
+
+    &:focus-visible {
+      background-color: #424242;
+    }
+
+    @media (min-width: 1025px) {
+      &:hover {
+        background-color: #736666;
+      }
+    }
+
+    &:active {
+      background-color: #292727;
+    }
+
+    &-add {
+      padding: 5px 15px;
+      border-radius: 5px;
+      min-width: 3%;
+      background-color: #404040;
+
+      &-icon {
+        width: 11px;
+        height: 11px;
+        fill: none;
+      }
+
+      &:focus-visible {
+        background-color: #636363;
+      }
+
+      @media (min-width: 1025px) {
+        &:hover {
+          background-color: #534f4f;
+        }
+      }
+
+      &:active {
+        background-color: var(--chover);
+      }
+    }
+
+    &-del {
+      position: absolute;
+      visibility: hidden;
+      z-index: 5;
+
+      &-btn {
+        pointer-events: auto;
+        padding: 5px 7px;
+        border-radius: 5px;
+        font-weight: 400;
+        font-size: 12px;
+        background-color: var(--red);
+
+        &:active {
+          background-color: #ff5555;
+        }
+
+        @media (min-width: 1025px) {
+          &:hover {
+            background-color: #b30000;
+          }
+        }
+
+        &:active {
+          background-color: #710000;
+        }
+      }
+
+      &-icon {
+        width: 20px;
+        height: 20px;
+
+        &-path {
+          fill: var(--cwhite);
+        }
+      }
+
+      &_active {
+        visibility: visible;
+      }
+    }
+  }
+}
+
+
+@media (max-width: 1200px) {
+  .offices {
+    &__select {
+      width: 45%;
+    }
+
+    &__floor {
+      min-width: 8.901%;
+    }
+  }
+}
+
+
+@media (max-width: 800px) {
+  .offices {
+    &__select {
+      margin-bottom: 10px;
+      width: 100%;
+    }
+
+    &__offices {
+      flex-direction: column;
+    }
+
+    &__edit {
+      width: 100%;
+    }
+
+    &__floors {
+      //overflow: hidden;
+      overflow-x: scroll;
+    }
+
+    &__floor {
+      min-width: 30.72%;
+    }
   }
 }

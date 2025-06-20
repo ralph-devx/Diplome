@@ -1,6 +1,6 @@
-import { HTMLAttributes, ReactNode } from 'react';
+import { HTMLAttributes } from 'react';
 
 
-export interface RightPanelProps extends HTMLAttributes<HTMLHeadingElement> {
-  children: ReactNode
+export interface RightPanelProps extends HTMLAttributes<HTMLDivElement> {
+  isBurgerActive: boolean
 }

@@ -7,6 +7,7 @@ import { UpdateUserDto } from './dto/update-user.dto';
 // import { JwtAuthGuard } from '../auth/jwt-auth.guard';
 import { Roles } from '../auth/roles-auth.decorator';
 import { RolesGuard } from '../auth/roles.guard';
+import { JwtAuthGuard } from '../auth/jwt-auth.guard';
 
 @ApiTags('Users')
 @Controller('users')
@@ -48,5 +49,13 @@ export class UsersController {
   @Get()
   getAll(): Promise<Users[]> {
     return this.usersService.getAllUsers();
+  }
+  
+  @ApiOperation({ summary: 'Получение пользователя по ID' })
+  @ApiResponse({status: 200, type: Users})
+  @UseGuards(JwtAuthGuard)
+  @Get('/user')
+  getUser(@Query('id') id: number): Promise<Users> {
+    return this.usersService.getUserById(id);
   }
 }

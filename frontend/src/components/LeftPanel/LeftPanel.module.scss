@@ -55,6 +55,7 @@
       padding: 8px;
       border-radius: 8px;
       width: 100%;
+      pointer-events: none;
     }
 
     &-icon {
@@ -87,6 +88,50 @@
       }
       &::before {
         background-color: var(--cwhite);
+      }
+    }
+  }
+}
+
+@media (max-width: 1400px) {
+  .left-panel {
+    width: 18.695%;
+    min-width: 18.695%;
+  }
+}
+
+@media (max-width: 800px) {
+  .left-panel {
+    width: 100%;
+    max-width: unset;
+    height: unset;
+
+    &__container {
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 15px 15px 15px;
+    }
+
+    &__logo {
+      margin: 0;
+      width: 30%;
+      z-index: 2;
+    }
+
+    &__nav {
+      position: fixed;
+      top: 0;
+      right: 0;
+      left: 0;
+      bottom: 0;
+      padding: 66.02px 15px 50px 0;
+      z-index: 1;
+      background-color: var(--cbg);
+      display: none;
+
+      &_active {
+        display: flex;
       }
     }
   }

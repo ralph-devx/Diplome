@@ -1,13 +1,14 @@
-import SelectOffice from '../../components/UI_UX/SelectOffice/SelectOffice.tsx';
 import styles from './MainPage.module.scss';
+import SelectOffice from '../../components/UI_UX/SelectOffice/SelectOffice.tsx';
 import CanvasUser from '../../components/KonvaCanvaces/CanvasUser/CanvasUser.tsx';
-import { useEffect, useState } from 'react';
+import { useCallback, useEffect, useState } from 'react';
 import OfficesService from '../../networking/services/OfficesService.ts';
 import { IOffice } from '../../networking/models/IOffice.ts';
 import { IWorkplace } from '../../networking/models/IWorkplace.ts';
 import { IFloor } from '../../networking/models/IFloor.ts';
 import BookingService from '../../networking/services/BookingService.ts';
 import { IBooking } from '../../networking/models/IBooking.ts';
+import cn from 'classnames';
 
 
 function MainPage() {
@@ -17,6 +18,7 @@ function MainPage() {
   const [workplaces, setWorkplaces] = useState<IWorkplace[]>([]);
   const [selectedFloor, setSelectedFloor] = useState<number>(0);
   const [bookings, setBookings] = useState<IBooking[]>([]);
+  // const yamap = useRef(null);
 
   
   // подгрузка оффисов
@@ -34,13 +36,17 @@ function MainPage() {
   }, []);
   
   // подгрузка этажей в зависимости от выбранного офиса
-  const getFloors = async () => {
+  const getFloors = useCallback(async () => {
+    if (!selectedOffice) return;
     const res = await OfficesService.getFloors(selectedOffice);
     setFloors(res.data.sort((a: IFloor, b: IFloor) => a.level - b.level));
-  };
-  useEffect(() => {
-    getFloors();
+    setWorkplaces([]);
   }, [selectedOffice]);
+  useEffect(() => {
+    if (selectedOffice) {
+      getFloors();
+    }
+  }, [getFloors, selectedOffice, offices]);
   
   // подгрузка рабочих мест
   const choiceFloor = async () => {
@@ -63,6 +69,7 @@ function MainPage() {
   }, []);
   
   
+  
   return (
     <>
       <SelectOffice
@@ -72,12 +79,13 @@ function MainPage() {
         placeholder={'Выберите офис для настройки'}
       />
       {/*<div className={styles['main-page__content']}>*/}
-        <div className={styles['main-page__floors']}>
-          {floors.map(floor => (
-            <button key={floor.id} onClick={() => setSelectedFloor(floor.id)}>Этаж {floor.level}</button>
-          ))}
-        </div>
-        <CanvasUser workplaces={workplaces} bookings={bookings} />
+      <div className={styles['main-page__floors']}>
+        {floors.map(floor => (
+          <button className={cn('btn-reset', styles['main-page__floor'])} key={floor.id}
+                  onClick={() => setSelectedFloor(floor.id)}>{floor.level}</button>
+        ))}
+      </div>
+      <CanvasUser workplaces={workplaces} bookings={bookings} refreshBookings={getBookings}/>
       {/*</div>*/}
     </>
   );

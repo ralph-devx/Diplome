@@ -1,36 +1,3 @@
-//.modal {
-//  position: absolute;
-//  top: 0;
-//  right: 0;
-//  bottom: 0;
-//  left: 0;
-//  display: none;
-//  align-items: center;
-//  justify-content: center;
-//  width: 100vw;
-//  height: 100vh;
-//  background-color: rgba(0, 0, 0, 0.2);
-//  pointer-events: none;
-//  z-index: 10;
-//
-//  &__content {
-//    display: flex;
-//    flex-direction: column;
-//    padding: 30px;
-//    border-radius: 1vw;
-//    width: 25.313%;
-//    //background-color: var(--cwhite);
-//    box-shadow: 0 0 5px 3px rgba(255, 255, 255, 0.03);
-//    background-color: var(--cbg3);
-//  }
-//
-//  &_active {
-//    display: flex;
-//    pointer-events: auto;
-//  }
-//}
-
-
 .modal {
   position: fixed;
   top: 0;
@@ -97,5 +64,22 @@
   100% {
     transform: translateY(0);
     opacity: 1;
+  }
+}
+
+@media (max-width: 1200px) {
+  .modal {
+    &__content {
+      width: 45%;
+    }
+  }
+}
+
+@media (max-width: 800px) {
+  .modal {
+    &__content {
+      padding: 15px;
+      width: 93%;
+    }
   }
 }

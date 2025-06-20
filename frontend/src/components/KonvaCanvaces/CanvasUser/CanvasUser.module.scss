@@ -1,0 +1,147 @@
+//.konva {
+//  position: relative;
+//  border-radius: 10px;
+//  //width: 100%;
+//  width: 70%;
+//  height: 70%;
+//  background-color: #1d1d1d;
+//}
+
+.konva {
+  display: flex;
+  flex-direction: column;
+  width: 1300px;
+  height: 100%;
+
+  &__container {
+    position: relative;
+    border: 1px solid var(--gray);
+    border-radius: 8px;
+    width: 1300px;
+    height: 80vh;
+    background-color: var(--cbg);
+    //background-image: url('../../assets/office-plan.jpg');
+    background-image: url('../../../assets/office-plan2.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  }
+}
+
+.info-panel {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 300px;
+  background-color: white;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+  z-index: 10;
+  animation: fadeIn 0.3s ease-out;
+
+  &__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 15px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #eee;
+  }
+
+  &__title {
+    margin: 0;
+    font-weight: 700;
+    font-size: 18px;
+    color: #000;
+  }
+
+  &__status {
+    margin: 0;
+    margin-bottom: 20px;
+    color: #555;
+    font-size: 16px;
+  }
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 10px;
+    left: -10px;
+    width: 20px;
+    height: 20px;
+    background-color: white;
+    transform: rotate(45deg);
+  }
+
+  &__labels {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  &__label {
+    display: flex;
+    gap: 0 10px;
+  }
+
+  &__error {
+    margin: 0;
+    max-width: 100%;
+    font-size: 14px;
+    font-weight: 400;
+    color: var(--red);
+  }
+
+  &__details {
+    display: flex;
+    flex-direction: column;
+    gap: 5px 0;
+    margin-bottom: 30px;
+
+    &-fio {
+      margin: 0;
+      font-weight: 500;
+      font-size: 18px;
+      color: var(--cblack);
+    }
+    &-period {
+      margin: 0;
+      font-weight: 400;
+      font-size: 16px;
+      color: #555;
+    }
+  }
+
+  &__reservebtn {
+    width: 100%;
+  }
+  &__cancel {
+    width: 100%;
+  }
+}
+
+
+.status-indicator {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+@media (max-width: 1200px) {
+
+}

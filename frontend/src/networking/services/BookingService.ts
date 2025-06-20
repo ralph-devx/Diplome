@@ -15,6 +15,10 @@ export default class BookingService {
     return $api.post(`/booking`, data);
   }
   
+  static async deleteBook(id: number) {
+    return $api.delete(`/booking?id=${id}`);
+  }
+  
   // static async getOfficesInclude() {
   //   return $api.get("/offices");
   // }

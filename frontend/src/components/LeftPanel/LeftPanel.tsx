@@ -1,23 +1,37 @@
 import styles from './LeftPanel.module.scss';
-import IqnixLogo from '/src/assets/logo.png';
+import Logo from '/src/assets/logo.png';
 import cn from 'classnames';
 import { NavLink } from 'react-router';
 import { useContext } from 'react';
 import { Context } from '../../main.tsx';
 import { observer } from 'mobx-react-lite';
+import BurgerMenu from '../UI_UX/BurgerMenu/BurgerMenu.tsx';
+import { LeftPanelProps } from './LeftPanel.props.ts';
 
 
-const LeftPanel = observer(()  => {
+const LeftPanel = observer(({ isBurgerActive, setIsBurgerActive }: LeftPanelProps)  => {
   const { store } = useContext(Context);
+  
+  
+  // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+  // @ts-expect-error
+  const selectNavItem = (e) => {
+    if (e.target.classList.contains(styles['left-panel__btn'])) {
+      setIsBurgerActive(false);
+    }
+  };
+
   
   return (
     <header className={styles['left-panel']}>
       <div className={styles['left-panel__container']}>
-        <img className={styles['left-panel__logo']} src={IqnixLogo} alt="логотип iqnix"/>
-        <nav className={styles['left-panel__nav']}>
+        <img className={styles['left-panel__logo']} src={Logo} alt="логотип iqnix"/>
+        <nav className={cn(styles['left-panel__nav'], {
+          [styles['left-panel__nav_active']]: isBurgerActive
+        })} onClick={selectNavItem}>
           <NavLink className={({ isActive }) => cn(styles['left-panel__btn'], {
             [styles['left-panel__btn_active']]: isActive
-          })} to={'/booking'}>
+          })} to={'/'}>
             <span className={styles['left-panel__btn-content']}>
               <svg className={styles['left-panel__btn-icon']} viewBox="0 0 19 19" xmlns="http://www.w3.org/2000/svg">
                 <path className={styles['left-panel__btn-icon-fill']}
@@ -27,18 +41,7 @@ const LeftPanel = observer(()  => {
               Бронирование
             </span>
           </NavLink>
-          <NavLink className={({ isActive }) => cn(styles['left-panel__btn'], {
-            [styles['left-panel__btn_active']]: isActive
-          })} to={'/mybooking'}>
-            <span className={styles['left-panel__btn-content']}>
-              <svg className={styles['left-panel__btn-icon']} viewBox="0 0 19 19" xmlns="http://www.w3.org/2000/svg">
-                <path className={styles['left-panel__btn-icon-fill']}
-                      d="M18.6024 0.556554C19.1325 1.29863 19.1325 2.50375 18.6024 3.24582L7.74651 18.4434C7.21644 19.1855 6.3556 19.1855 5.82552 18.4434L0.397556 10.8446C-0.132519 10.1026 -0.132519 8.89744 0.397556 8.15537C0.927631 7.41329 1.78847 7.41329 2.31855 8.15537L6.78814 14.4066L16.6857 0.556554C17.2158 -0.185518 18.0766 -0.185518 18.6067 0.556554H18.6024Z"
-                />
-              </svg>
-              Моя бронь
-            </span>
-          </NavLink>
+
           {store.user.role === 'ADMIN' && <NavLink className={({isActive}) => cn(styles['left-panel__btn'], {
             [styles['left-panel__btn_active']]: isActive
           })} to={'/admin'}>
@@ -52,10 +55,24 @@ const LeftPanel = observer(()  => {
             </span>
           </NavLink>}
         </nav>
+        <BurgerMenu isActive={isBurgerActive} onClick={() => setIsBurgerActive((prev: boolean) => !prev)}/>
       </div>
     </header>
   );
 });
+
+// {/*<NavLink className={({ isActive }) => cn(styles['left-panel__btn'], {*/}
+// {/*  [styles['left-panel__btn_active']]: isActive*/}
+// {/*})} to={'/mybooking'}>*/}
+// {/*  <span className={styles['left-panel__btn-content']}>*/}
+// {/*    <svg className={styles['left-panel__btn-icon']} viewBox="0 0 19 19" xmlns="http://www.w3.org/2000/svg">*/}
+// {/*      <path className={styles['left-panel__btn-icon-fill']}*/}
+// {/*            d="M18.6024 0.556554C19.1325 1.29863 19.1325 2.50375 18.6024 3.24582L7.74651 18.4434C7.21644 19.1855 6.3556 19.1855 5.82552 18.4434L0.397556 10.8446C-0.132519 10.1026 -0.132519 8.89744 0.397556 8.15537C0.927631 7.41329 1.78847 7.41329 2.31855 8.15537L6.78814 14.4066L16.6857 0.556554C17.2158 -0.185518 18.0766 -0.185518 18.6067 0.556554H18.6024Z"*/}
+// {/*      />*/}
+// {/*    </svg>*/}
+// {/*    Моя бронь*/}
+// {/*  </span>*/}
+// {/*</NavLink>*/}
 
 
 export default LeftPanel;

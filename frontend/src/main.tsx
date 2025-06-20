@@ -33,7 +33,7 @@ const router = createBrowserRouter([
     element: <RequireAuth><GeneralLayout/></RequireAuth>,
     children: [
       {
-        path: 'booking',
+        path: '/',
         element: <MainPage/>
       },
       {

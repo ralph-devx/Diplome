@@ -8,6 +8,7 @@ import { useNavigate } from 'react-router';
 import { AxiosError } from 'axios';
 import { Context } from '../../main.tsx';
 import { observer } from 'mobx-react-lite';
+import Logo from '/src/assets/logo.png';
 
 
 export type LoginForm = {
@@ -63,6 +64,7 @@ function AuthPage() {
     <section className={styles['auth-page']}>
       <div className={cn('container', styles['auth-page__container'])}>
         <div className={styles['auth-page__content']}>
+          <img className={styles['auth-page__logo']} src={Logo} alt="логотип doffice"/>
           <h2 className={styles['auth-page__content-title']}>Вход в аккаунт</h2>
           <form className={styles['auth-page__form']} onSubmit={authSubmit}>
             <h3 className={styles['auth-page__label']}>Логин</h3>
@@ -81,19 +83,19 @@ function AuthPage() {
               name={'password'}
               placeholder={'Введите пароль'}
             />
-            <div className={styles['auth-page__bottom']}>
+{/*            <div className={styles['auth-page__bottom']}>
               <label className={styles['auth-page__reme']} htmlFor="auth-page__checkbox">
                 <input id={'auth-page__checkbox'} type="checkbox"/>
                 <p className={styles['auth-page__reme-text']}>Запомнить меня</p>
               </label>
               <a className={styles['auth-page__forget']} href="#">Забыли пароль?</a>
-            </div>
+            </div>*/}
             <Button className={styles['auth-page__submit']} type={'submit'}>Войти</Button>
           </form>
         </div>
         <h1 className={styles['auth-page__title']}>
-          IQNIX
-          <span className={styles['auth-page__title-br']}>RESERVE</span>
+          DO
+          <span className={styles['auth-page__title-br']}>OFFICE</span>
         </h1>
       </div>
     </section>

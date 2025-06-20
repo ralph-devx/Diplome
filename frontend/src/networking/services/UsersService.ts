@@ -18,4 +18,8 @@ export default class UsersService {
   static async create(user: ICreateUsers) {
     return $api.post(`/users`, user);
   }
+  
+  static async getUserById(id: number) {
+    return $api.get(`/users/user/?id=${id}`);
+  }
 }

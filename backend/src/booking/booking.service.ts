@@ -25,7 +25,7 @@ export class BookingService {
   
   async getBookings(): Promise<Booking[]> {
     return await this.bookingRepository.findAll({
-      attributes: ['id', 'start_time', 'end_time', 'status'],
+      attributes: ['id', 'user_id', 'start_time', 'end_time', 'status'],
       include: [
         {
           model: Workplace,
@@ -49,8 +49,17 @@ export class BookingService {
   
   async getOnlyBookings(): Promise<Booking[]> {
     return await this.bookingRepository.findAll({
-      attributes: ['id','workplace_id', 'start_time', 'end_time', 'status'],
+      attributes: ['id', 'user_id', 'workplace_id', 'start_time', 'end_time', 'status'],
     });
+  }
+  
+  // async getBookingsByWorkplace(id: number): Promise<Booking[]> {
+  //   return await this.bookingRepository.findAll({ where: { workplace_id: id } });
+  // }
+  
+  
+  async deleteBooking(id: number): Promise<number> {
+    return await this.bookingRepository.destroy({ where: { id } });
   }
   
   

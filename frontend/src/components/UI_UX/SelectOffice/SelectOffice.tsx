@@ -1,11 +1,11 @@
-import styles from './DoubleSelect.module.scss';
+import styles from './SelectOffice.module.scss';
 import { useEffect, useRef, useState } from 'react';
 import cn from 'classnames';
-import { DoubleSelectProps } from './DoubleSelectProps.ts';
+import { SelectOfficeProps } from './SelectOfficeProps.ts';
 import { IOffice } from '../../../networking/models/IOffice.ts';
 
 
-function SelectOffice({ className, placeholder, setFun, data }: DoubleSelectProps) {
+function SelectOffice({ className, placeholder, setFun, data }: SelectOfficeProps) {
   const [openOrClose, setOpenOrClose] = useState(false);
   const [currentSelectedItem, setCurrentSelectedItem] = useState<HTMLButtonElement | null>(null);
   const $selectElement = useRef<HTMLDivElement>(null);
@@ -23,7 +23,7 @@ function SelectOffice({ className, placeholder, setFun, data }: DoubleSelectProp
     }
     e.currentTarget.classList.add(styles['select__item_active']);
     if (setFun) {
-      console.log(el);
+      // console.log(el);
       setFun(el.id);
     }
     setCurPlaceholder(el.name);

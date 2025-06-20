@@ -1,4 +1,4 @@
-import { Module } from '@nestjs/common';
+import { forwardRef, Module } from '@nestjs/common';
 import { BookingController } from './booking.controller';
 import { BookingService } from './booking.service';
 import { AuthModule } from '../auth/auth.module';
@@ -11,8 +11,8 @@ import { OfficesModule } from '../offices/offices.module';
   providers: [BookingService],
   imports: [
     AuthModule,
-    OfficesModule,
     SequelizeModule.forFeature([Booking]),
+    forwardRef(() => OfficesModule),
   ],
   exports: [
     BookingService
