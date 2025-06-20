@@ -4,6 +4,7 @@ export interface IWorkplace {
   title: string;
   x: number;
   y: number;
+  radius: number;
   createdAt?: string;
   updatedAt?: string;
 }

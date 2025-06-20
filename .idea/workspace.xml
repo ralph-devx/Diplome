@@ -5,17 +5,23 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cc090460-70da-4693-8e74-1307373544ab" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/frontend/src/components/KonvaCanvaces/CanvasAdmin/CanvasAdmin.module.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/components/KonvaCanvaces/CanvasAdmin/CanvasAdmin.props.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/components/KonvaCanvaces/CanvasAdmin/CanvasAdmin.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/index.scss" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/index.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/KonvaCanvaces/CanvasUser/CanvasUser.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/KonvaCanvaces/CanvasUser/CanvasUser.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/KonvaCanvaces/CanvasUser/testKonvaCanvas.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/KonvaCanvaces/CanvasAdmin/testKonvaCanvas.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/UI_UX/SelectOffice/SelectOffice.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/UI_UX/SelectOffice/SelectOffice.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/layouts/General/GeneralLayout.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/layouts/General/GeneralLayout.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/layouts/General/GeneralLayout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/layouts/General/GeneralLayout.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/networking/models/IFloor.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/networking/models/IFloor.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/networking/models/IOffice.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/networking/models/IOffice.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/networking/models/IWorkplace.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/networking/models/IWorkplace.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/networking/services/OfficesService.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/networking/services/OfficesService.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/pages/AdminPage/Employee/Employee.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/pages/AdminPage/Employee/Employee.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/pages/AdminPage/Offices/Offices.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/pages/AdminPage/Offices/Offices.module.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/pages/AdminPage/Offices/Offices.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/pages/AdminPage/Offices/Offices.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/pages/AuthPage/AuthPage.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/pages/AuthPage/AuthPage.module.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/pages/AuthPage/AuthPage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/pages/AuthPage/AuthPage.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/pages/Main/MainPage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/pages/Main/MainPage.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -27,12 +33,13 @@
       <list>
         <option value="JSX File2.0" />
         <option value="SCSS 2.0" />
+        <option value="TypeScript JSX File" />
+        <option value="TypeScript File" />
         <option value="ReactTsComponent..child.0" />
         <option value="ReactTsComponent..child.1" />
         <option value="ReactTsComponent..child.2" />
         <option value="ReactTsComponent" />
-        <option value="TypeScript JSX File" />
-        <option value="TypeScript File" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
@@ -76,11 +83,11 @@
       <recent name="D:\IT\IT\PROJECTS\diplome\src\assets" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\IT\IT\PROJECTS\diplome\frontend\src\components\KonvaCanvaces\CanvasAdmin" />
       <recent name="D:\IT\IT\PROJECTS\diplome\frontend\src\components\KonvaCanvaces" />
       <recent name="D:\IT\IT\PROJECTS\diplome\frontend\src\helpers\RequireAdminRole" />
       <recent name="D:\IT\IT\PROJECTS\diplome\frontend\src\networking" />
       <recent name="D:\IT\IT\PROJECTS\diplome\backend\SequalizeFolder" />
-      <recent name="D:\IT\IT\PROJECTS\diplome\backend\src\old" />
     </key>
   </component>
   <component name="SharedIndexes">
@@ -127,7 +134,13 @@
       <workItem from="1748923211960" duration="5312000" />
       <workItem from="1748941319547" duration="12625000" />
       <workItem from="1749010887738" duration="26273000" />
-      <workItem from="1749095661517" duration="2189000" />
+      <workItem from="1749095661517" duration="2373000" />
+      <workItem from="1749186058771" duration="18273000" />
+      <workItem from="1749208238863" duration="12299000" />
+      <workItem from="1749276301936" duration="14964000" />
+      <workItem from="1749356905554" duration="5083000" />
+      <workItem from="1749532200038" duration="2968000" />
+      <workItem from="1749616599442" duration="267000" />
     </task>
     <servers />
   </component>

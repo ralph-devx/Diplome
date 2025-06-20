@@ -11,4 +11,4 @@ export interface IFloor {
 }
 
 
-export interface ICreateFloor extends Omit<IFloor, 'id' | 'createdAt' | 'updatedAt'> {}
+export interface ICreateFloor extends Omit<IFloor, 'id' | 'createdAt' | 'updatedAt' | 'workplaces'> {}

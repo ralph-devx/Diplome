@@ -4,19 +4,25 @@ import cn from 'classnames';
 import { useContext } from 'react';
 import { Context } from '../../main.tsx';
 import { useNavigate } from 'react-router';
+import { RightPanelProps } from './RightPanel.props.ts';
+import { IUser } from '../../networking/models/IUser.ts';
 
-function RightPanel() {
+function RightPanel({ isBurgerActive }: RightPanelProps) {
   const {store} = useContext(Context);
   const navigation = useNavigate();
   
   const logout = () => {
     localStorage.removeItem('jwt');
-    store.isAuth = false;
+    // store.isAuth = false;
+    store.setAuth(false);
+    store.setUser({} as IUser)
     navigation('/auth');
   };
   
   return (
-    <div className={styles['rp']}>
+    <div className={cn(styles['rp'], {
+      [styles['rp_active']]: isBurgerActive
+    })}>
       <button className={cn('btn-reset', styles['rp__exit'])}>
         <img className={styles['rp__img']} src={userImg} alt="изображение сотрудника"/>
       </button>

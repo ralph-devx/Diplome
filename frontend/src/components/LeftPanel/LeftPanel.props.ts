@@ -1,6 +1,7 @@
-import { HTMLAttributes, ReactNode } from 'react';
+import { HTMLAttributes } from 'react';
 
 
-export interface LeftPanelProps extends HTMLAttributes<HTMLElement> {
-  children: ReactNode
+export interface LeftPanelProps extends HTMLAttributes<HTMLDivElement> {
+  isBurgerActive: boolean;
+  setIsBurgerActive: Function;
 }

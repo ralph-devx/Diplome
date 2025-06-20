@@ -8,6 +8,7 @@ interface WorkplaceCreationAttr {
   title: string;
   x: number;
   y: number;
+  radius: number;
 }
 
 @Table({tableName: 'workplaces'})
@@ -20,8 +21,8 @@ export class Workplace extends Model<Workplace, WorkplaceCreationAttr> {
   @BelongsTo(() => Floor, { foreignKey: 'floor_id'})
   floor: Floor;
   
-  @ApiProperty({example: 'A1', description: 'Обозначение рабочего места'})
-  @Column({type: DataType.STRING, unique: true, allowNull: false})
+  @ApiProperty({example: 'A1', description: 'Название рабочего места'})
+  @Column({type: DataType.STRING, allowNull: false, defaultValue: '?'})
   declare title: string;
   
   @ApiProperty({example: 113, description: 'Расположение по горизонтали'})
@@ -31,4 +32,8 @@ export class Workplace extends Model<Workplace, WorkplaceCreationAttr> {
   @ApiProperty({example: 80, description: 'Расположение по вертикали'})
   @Column({type: DataType.INTEGER, allowNull: false})
   declare y: number;
+  
+  @ApiProperty({example: 20, description: 'Радиус рабочего места (точки на холсте)'})
+  @Column({type: DataType.INTEGER, defaultValue: 20})
+  declare radius: number;
 }

@@ -79,4 +79,12 @@ export class UsersService {
     const user = await this.userRepository.findOne({ where: { login } });
     return user;
   }
+  
+  async getUserById(id: number) {
+    const user = await this.userRepository.findOne({ where: { id } });
+    if (!user) {
+      throw new UnauthorizedException({message: 'Некорректный логин или пароль.'});
+    }
+    return user;
+  }
 }

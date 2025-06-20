@@ -10,5 +10,7 @@ export class CreateWorkplaceDto {
   readonly x: number;
   @ApiProperty({example: 80, description: 'Расположение по вертикали'})
   readonly y: number;
+  @ApiProperty({example: 20, description: 'Радиус рабочего места (точки на холсте)'})
+  readonly radius: number;
   // ещё можно сделать изображение, но позже
 }

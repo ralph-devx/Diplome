@@ -6,13 +6,15 @@ import { Office } from './office.model';
 import { Floor } from './floor.model';
 import { Workplace } from './workplace.model';
 import { AuthModule } from '../auth/auth.module';
+import { BookingModule } from '../booking/booking.module';
 
 @Module({
   controllers: [OfficesController],
   providers: [OfficesService],
   imports: [
     forwardRef(() => AuthModule),
-    SequelizeModule.forFeature([Office, Floor, Workplace])
+    SequelizeModule.forFeature([Office, Floor, Workplace]),
+    forwardRef(() => BookingModule)
   ],
   exports: [
     OfficesService,

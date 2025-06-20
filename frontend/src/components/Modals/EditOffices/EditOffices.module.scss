@@ -1,0 +1,71 @@
+.eof {
+  &__title {
+    margin: 0;
+    margin-bottom: 30px;
+    font-weight: 500;
+    font-size: 18px;
+    color: var(--cwhite);
+    text-align: center;
+  }
+
+  &__overlay {
+    margin-bottom: 30px;
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px 0;
+    padding-right: 15px;
+    width: 100%;
+    max-height: 400px;
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0 15px;
+    width: 100%;
+
+    &-inputs {
+      display: flex;
+      flex-direction: column;
+      width: 80%;
+    }
+
+    &-input {
+      padding: 10px 15px;
+      background-color: transparent;
+    }
+
+    &-actions {
+      display: flex;
+      gap: 0 5px;
+    }
+  }
+
+  &__save {
+    &-icon {
+      width: 15px;
+      height: 15px;
+      &-fill {
+        fill: var(--cwhite);
+      }
+    }
+  }
+
+  &__del {
+    background-color: var(--red);
+  }
+
+  &__actions {
+    display: flex;
+    justify-content: space-between;
+    gap: 0 10px;
+  }
+  &__btn {
+    width: 100%;
+    background-color: transparent;
+  }
+}
