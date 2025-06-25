@@ -1,15 +1,15 @@
 import styles from './Employee.module.scss';
-import SelectOffice from '../../../components/UI_UX/SelectOffice/SelectOffice.tsx';
+// import SelectOffice from '../../../components/UI_UX/SelectOffice/SelectOffice.tsx';
 import Button from '../../../components/UI_UX/Button/Button.tsx';
 import { OverlayScrollbarsComponent } from 'overlayscrollbars-react';
 import cn from 'classnames';
 import UsersService from '../../../networking/services/UsersService.ts';
-import { useCallback, useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { IUser } from '../../../networking/models/IUser.ts';
 import ModalBasis from '../../../components/Modals/ModalBasis/ModalBasis.tsx';
 import CreateEmployee from '../../../components/Modals/CreateEmployee/CreateEmployee.tsx';
-import OfficesService from '../../../networking/services/OfficesService.ts';
-import { IOffice } from '../../../networking/models/IOffice.ts';
+// import OfficesService from '../../../networking/services/OfficesService.ts';
+// import { IOffice } from '../../../networking/models/IOffice.ts';
 
 
 // const offices = [
@@ -21,24 +21,24 @@ import { IOffice } from '../../../networking/models/IOffice.ts';
 
 
 function Employee() {
-  const [offices, setOffices] = useState<IOffice[]>([]);
+  // const [offices, setOffices] = useState<IOffice[]>([]);
   const [users, setUsers] = useState<IUser[]>([]);
   const [editableNames, setEditableNames] = useState<Record<number, string>>({});
   const [activeModalCE, setActiveModalCE] = useState(false);
   
   
-  // получение всей информации про офисы
-  const getOffices = useCallback(async () => {
-    try {
-      const res = await OfficesService.getOfficesOnly();
-      setOffices(res.data.sort((a: IOffice, b: IOffice) => a.id - b.id));
-    } catch (e) {
-      console.log(e);
-    }
-  }, []);
-  useEffect(() => {
-    getOffices();
-  }, [getOffices]);
+  // // получение всей информации про офисы
+  // const getOffices = useCallback(async () => {
+  //   try {
+  //     const res = await OfficesService.getOfficesOnly();
+  //     setOffices(res.data.sort((a: IOffice, b: IOffice) => a.id - b.id));
+  //   } catch (e) {
+  //     console.log(e);
+  //   }
+  // }, []);
+  // useEffect(() => {
+  //   getOffices();
+  // }, [getOffices]);
   
   
   const getAllUsers = async () => {
@@ -93,7 +93,7 @@ function Employee() {
       </ModalBasis>
       
       <div className={styles['emp__actions']}>
-        <SelectOffice data={offices} placeholder={'Выберите офис для настройки'}/>
+        {/*<SelectOffice data={offices} placeholder={'Выберите офис для настройки'}/>*/}
         <Button className={styles['emp__add']} onClick={() => setActiveModalCE(true)}>
           Добавить сотрудника
           <svg width="17" height="20" viewBox="0 0 17 20" fill="none" xmlns="http://www.w3.org/2000/svg">

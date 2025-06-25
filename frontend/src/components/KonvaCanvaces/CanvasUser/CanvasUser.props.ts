@@ -7,5 +7,6 @@ export interface CanvasUserProps extends HTMLAttributes<HTMLDivElement> {
   // children: ReactNode
   workplaces: IWorkplace[];
   bookings: IBooking[];
-  refreshBookings: Function
+  refreshBookings: Function;
+  floorImage: string | null;
 }

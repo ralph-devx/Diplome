@@ -1,7 +1,8 @@
 import axios from "axios";
 
-export const API_URL = 'http://localhost:5000/api';
-// export const API_URL = 'https://doffice.iqnix.tech/api';
+export const BASE_URL = 'https://doffice.iqnix.tech/';
+// export const BASE_URL = 'http://localhost:5000/';
+export const API_URL = `${BASE_URL}api`;
 
 const $api = axios.create({
   withCredentials: true,

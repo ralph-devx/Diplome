@@ -93,14 +93,14 @@
   }
 }
 
-@media (max-width: 1400px) {
+@media (max-width: 1400px) { // 1200
   .left-panel {
     width: 18.695%;
     min-width: 18.695%;
   }
 }
 
-@media (max-width: 800px) {
+@media (max-width: 1200px) { // 800
   .left-panel {
     width: 100%;
     max-width: unset;
@@ -125,7 +125,7 @@
       right: 0;
       left: 0;
       bottom: 0;
-      padding: 66.02px 15px 50px 0;
+      padding: 16% 15px 50px 0;
       z-index: 1;
       background-color: var(--cbg);
       display: none;
@@ -133,6 +133,14 @@
       &_active {
         display: flex;
       }
+    }
+  }
+}
+
+@media (max-width: 800px) {
+  .left-panel {
+    &__nav {
+      padding: 30% 15px 50px 0;
     }
   }
 }

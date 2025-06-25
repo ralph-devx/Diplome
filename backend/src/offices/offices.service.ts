@@ -10,6 +10,7 @@ import { Booking } from '../booking/booking.model';
 import { BookingService } from '../booking/booking.service';
 import { UpdateOfficeDto } from './dto/update-office.dto';
 import { UpdateWorkplaceDto } from './dto/update-workplace.dto';
+import { FilesService } from '../files/files.service';
 
 @Injectable()
 export class OfficesService {
@@ -18,6 +19,7 @@ export class OfficesService {
     @InjectModel(Floor) private readonly floorRepository: typeof Floor,
     @InjectModel(Workplace) private readonly workplaceRepository: typeof Workplace,
     private readonly bookingService: BookingService,
+    private readonly filesService: FilesService // Добавляем сервис файлов
     // @InjectModel(Booking) private readonly bookingRepository: typeof Booking
   ) {}
   
@@ -73,14 +75,27 @@ export class OfficesService {
     return office;
   }
   
-  async createFloor(dto: CreateFloorDto): Promise<Floor> {
-    const floor = await this.floorRepository.create(dto);
+  async createFloor(dto: CreateFloorDto, file?: Express.Multer.File): Promise<Floor> {
+    let imagePath: string | null = null;
+    if (file) {
+      imagePath = await this.filesService.saveFile(file);
+    }
+    const floor = await this.floorRepository.create({
+      ...dto,
+      image: imagePath
+    });
     return floor;
   }
   async getFloors(id: number): Promise<Floor[]> {
-    return await this.floorRepository.findAll({ where: { office_id: id }, attributes: ['id', 'level']});
+    return await this.floorRepository.findAll({ where: { office_id: id }, attributes: ['id', 'level', 'image']});
   }
   async deleteFloors(id: number): Promise<number> {
+    const floor = await this.floorRepository.findByPk(id);
+    if (!floor) return 0;
+    // Удаляем изображение, если оно есть
+    if (floor.image) {
+      await this.filesService.deleteFile(floor.image);
+    }
     const workplaces = await this.workplaceRepository.findAll({ where: { floor_id: id } });
     for (const workplace of workplaces) {
       await this.bookingService.deleteBooking(workplace.id);
@@ -88,7 +103,24 @@ export class OfficesService {
     await this.workplaceRepository.destroy({ where: { floor_id: id } });
     return await this.floorRepository.destroy({ where: { id: id } });
   }
-  
+  async updateFloorImage(id: number, file: Express.Multer.File): Promise<Floor> {
+    const floor = await this.floorRepository.findByPk(id);
+    
+    if (!floor) {
+      throw new BadRequestException('Этаж не найден');
+    }
+    
+    // Удаляем старое изображение, если оно есть
+    if (floor.image) {
+      await this.filesService.deleteFile(floor.image);
+    }
+    
+    // Сохраняем новое изображение
+    const imagePath = await this.filesService.saveFile(file);
+    
+    // Обновляем запись в бд
+    return await floor.update({ image: imagePath });
+  }
   
   async createWorkplace(dto: CreateWorkplaceDto): Promise<Workplace> {
     const workplace = await this.workplaceRepository.create(dto);

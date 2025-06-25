@@ -26,14 +26,14 @@ export class Workplace extends Model<Workplace, WorkplaceCreationAttr> {
   declare title: string;
   
   @ApiProperty({example: 113, description: 'Расположение по горизонтали'})
-  @Column({type: DataType.INTEGER, allowNull: false})
+  @Column({type: DataType.FLOAT, allowNull: false})
   declare x: number;
   
   @ApiProperty({example: 80, description: 'Расположение по вертикали'})
-  @Column({type: DataType.INTEGER, allowNull: false})
+  @Column({type: DataType.FLOAT, allowNull: false})
   declare y: number;
   
   @ApiProperty({example: 20, description: 'Радиус рабочего места (точки на холсте)'})
-  @Column({type: DataType.INTEGER, defaultValue: 20})
+  @Column({type: DataType.FLOAT, defaultValue: 20})
   declare radius: number;
 }

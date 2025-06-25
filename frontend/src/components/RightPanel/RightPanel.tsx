@@ -15,8 +15,8 @@ function RightPanel({ isBurgerActive }: RightPanelProps) {
     localStorage.removeItem('jwt');
     // store.isAuth = false;
     store.setAuth(false);
-    store.setUser({} as IUser)
-    navigation('/auth');
+    store.setUser({} as IUser);
+    navigation('/../auth');
   };
   
   return (

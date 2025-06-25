@@ -8,4 +8,5 @@ export interface CanvasAdminProps extends HTMLAttributes<HTMLHeadingElement> {
   onUpdate: Function;
   refresh: Function;
   floorId: number | null;
+  floorImage: string | null;
 }

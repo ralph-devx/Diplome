@@ -6,6 +6,7 @@ export interface IFloor {
   office_id: number;
   level: number;
   workplaces?: IWorkplace[];
+  image?: string;
   createdAt?: string;
   updatedAt?: string;
 }
