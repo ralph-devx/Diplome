@@ -8,6 +8,7 @@ import { Type } from 'class-transformer';
 interface FloorCreationAttr {
   office_id: number;
   level: number;
+  image?: string | null; // Добавляем поле для изображения
 }
 
 
@@ -35,5 +36,10 @@ export class Floor extends Model<Floor, FloorCreationAttr> {
   })
   @Type(() => Workplace)
   @HasMany(() => Workplace, { foreignKey: 'floor_id'})
-  declare workplaces: Workplace[]
+  declare workplaces: Workplace[];
+  
+  // Добавляем поле для изображения
+  @ApiProperty({ example: 'floor-plan.jpg', description: 'Изображение плана этажа' })
+  @Column({type: DataType.STRING, allowNull: true})
+  declare image: string | null;
 }

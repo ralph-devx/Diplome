@@ -9,6 +9,8 @@ import { IFloor } from '../../networking/models/IFloor.ts';
 import BookingService from '../../networking/services/BookingService.ts';
 import { IBooking } from '../../networking/models/IBooking.ts';
 import cn from 'classnames';
+import { BASE_URL } from '../../networking/http';
+// import { API_URL } from '../../networking/http';
 
 
 function MainPage() {
@@ -17,6 +19,7 @@ function MainPage() {
   const [floors, setFloors] = useState<IFloor[]>([]);
   const [workplaces, setWorkplaces] = useState<IWorkplace[]>([]);
   const [selectedFloor, setSelectedFloor] = useState<number>(0);
+  const [currentFloorImage, setCurrentFloorImage] = useState<string | null>(null);
   const [bookings, setBookings] = useState<IBooking[]>([]);
   // const yamap = useRef(null);
 
@@ -39,6 +42,7 @@ function MainPage() {
   const getFloors = useCallback(async () => {
     if (!selectedOffice) return;
     const res = await OfficesService.getFloors(selectedOffice);
+    console.log(res.data);
     setFloors(res.data.sort((a: IFloor, b: IFloor) => a.level - b.level));
     setWorkplaces([]);
   }, [selectedOffice]);
@@ -75,21 +79,30 @@ function MainPage() {
       <SelectOffice
         className={styles['main-page__select-office']}
         data={offices}
-        setFun={setSelectedOffice}
+        setFun={(id: number) => {
+          setSelectedFloor(0);
+          setCurrentFloorImage(null);
+          setSelectedOffice(id);
+        }}
         placeholder={'Выберите офис для настройки'}
       />
-      {/*<div className={styles['main-page__content']}>*/}
+
       <div className={styles['main-page__floors']}>
         {floors.map(floor => (
           <button className={cn('btn-reset', styles['main-page__floor'])} key={floor.id}
-                  onClick={() => setSelectedFloor(floor.id)}>{floor.level}</button>
+                  onClick={() => {
+                    setCurrentFloorImage(floor.image || null);
+                    setSelectedFloor(floor.id);
+                  }}>{floor.level}</button>
         ))}
       </div>
-      <CanvasUser workplaces={workplaces} bookings={bookings} refreshBookings={getBookings}/>
+      <CanvasUser workplaces={workplaces} floorImage={`${BASE_URL}static/${currentFloorImage}`} bookings={bookings}
+                  refreshBookings={getBookings}/>
       {/*</div>*/}
     </>
   );
 }
 
+// image={floorImage}
 
 export default MainPage;

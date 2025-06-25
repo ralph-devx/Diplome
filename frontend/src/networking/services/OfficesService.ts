@@ -2,7 +2,7 @@ import $api from '../http';
 import { ICreateFloor } from '../models/IFloor.ts';
 import { ICreateWorkplace, IWorkplace } from '../models/IWorkplace.ts';
 import { ICreateOffice, IOffice } from '../models/IOffice.ts';
-import { AxiosResponse } from 'axios';
+import { AxiosRequestConfig, AxiosResponse } from 'axios';
 
 
 export default class OfficesService {
@@ -30,6 +30,15 @@ export default class OfficesService {
   }
   static async deleteFloors(id: number) {
     return $api.delete(`/offices/floors?id=${id}`);
+  }
+  // static async getFloorImage(id: number) {
+  //
+  // }
+  static async updateFloorImage(id: number, file: FormData) {
+    const config: AxiosRequestConfig = {
+      headers: { 'Content-Type': 'multipart/form-data' }
+    };
+    return $api.post(`/offices/floor/image?id=${id}`, file, config);
   }
   
   static async createWorkplace(data: ICreateWorkplace) {

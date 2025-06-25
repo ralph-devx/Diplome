@@ -5,23 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cc090460-70da-4693-8e74-1307373544ab" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/frontend/src/components/KonvaCanvaces/CanvasAdmin/CanvasAdmin.module.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/components/KonvaCanvaces/CanvasAdmin/CanvasAdmin.props.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/components/KonvaCanvaces/CanvasAdmin/CanvasAdmin.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/KonvaCanvaces/CanvasUser/CanvasUser.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/KonvaCanvaces/CanvasUser/CanvasUser.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/KonvaCanvaces/CanvasUser/testKonvaCanvas.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/KonvaCanvaces/CanvasAdmin/testKonvaCanvas.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/UI_UX/SelectOffice/SelectOffice.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/UI_UX/SelectOffice/SelectOffice.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/layouts/General/GeneralLayout.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/layouts/General/GeneralLayout.module.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/layouts/General/GeneralLayout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/layouts/General/GeneralLayout.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/networking/models/IFloor.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/networking/models/IFloor.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/networking/models/IOffice.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/networking/models/IOffice.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/networking/models/IWorkplace.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/networking/models/IWorkplace.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/networking/services/OfficesService.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/networking/services/OfficesService.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/pages/AdminPage/Employee/Employee.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/pages/AdminPage/Employee/Employee.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/pages/AdminPage/Offices/Offices.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/pages/AdminPage/Offices/Offices.module.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/pages/AdminPage/Offices/Offices.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/pages/AdminPage/Offices/Offices.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/pages/Main/MainPage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/pages/Main/MainPage.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -141,6 +125,7 @@
       <workItem from="1749356905554" duration="5083000" />
       <workItem from="1749532200038" duration="2968000" />
       <workItem from="1749616599442" duration="267000" />
+      <workItem from="1750403959799" duration="91000" />
     </task>
     <servers />
   </component>

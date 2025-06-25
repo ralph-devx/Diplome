@@ -7,4 +7,7 @@ export class CreateFloorDto {
   
   @ApiProperty({example: 1, description: 'Номер этажа'})
   readonly level: number;
+  
+  @ApiProperty({example: 'floor-plan.jpg', description: 'Изображение плана этажа'})
+  readonly image: string;
 }

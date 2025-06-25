@@ -1,6 +1,6 @@
-import { Body, Controller, Delete, Get, Post, Query, UseGuards } from '@nestjs/common';
+import { Body, Controller, Delete, Get, Post, Query, UploadedFile, UseGuards, UseInterceptors } from '@nestjs/common';
 import { OfficesService } from './offices.service';
-import { ApiOperation, ApiResponse, ApiTags } from '@nestjs/swagger';
+import { ApiBody, ApiConsumes, ApiOperation, ApiResponse, ApiTags } from '@nestjs/swagger';
 import { Roles } from '../auth/roles-auth.decorator';
 import { RolesGuard } from '../auth/roles.guard';
 import { CreateOfficeDto } from './dto/create-office.dto';
@@ -12,6 +12,7 @@ import { Workplace } from './workplace.model';
 import { JwtAuthGuard } from '../auth/jwt-auth.guard';
 import { UpdateOfficeDto } from './dto/update-office.dto';
 import { UpdateWorkplaceDto } from './dto/update-workplace.dto';
+import { FileInterceptor } from '@nestjs/platform-express';
 
 @ApiTags('Offices')
 @Controller('offices')
@@ -76,13 +77,16 @@ export class OfficesController {
   }
   
   
-  @ApiOperation({ summary: 'Создание этажа офиса' })
+  @ApiOperation({ summary: 'Создание этажа офиса с изображением' })
   @ApiResponse({status: 200, type: Floor})
   @Roles('ADMIN')
   @UseGuards(RolesGuard)
   @Post('/floor')
-  createFloor(@Body() floorDto: CreateFloorDto) {
-    return this.officesService.createFloor(floorDto);
+  @UseInterceptors(FileInterceptor('image'))
+  @ApiConsumes('multipart/form-data')
+  @ApiBody({ description: 'Данные для создания этажа', type: CreateFloorDto, })
+  createFloor(@Body() floorDto: CreateFloorDto, @UploadedFile() file?: Express.Multer.File) {
+    return this.officesService.createFloor(floorDto, file);
   }
   
   @ApiOperation({ summary: 'Получение этажей по id офиса' })
@@ -112,6 +116,17 @@ export class OfficesController {
     return this.officesService.deleteFloors(id);
   }
   
+  @ApiOperation({ summary: 'Обновление изображения этажа' })
+  @ApiResponse({status: 200, type: Floor})
+  @Roles('ADMIN')
+  @UseGuards(RolesGuard)
+  @Post('/floor/image')
+  @UseInterceptors(FileInterceptor('image'))
+  @ApiConsumes('multipart/form-data')
+  @ApiBody({ description: 'Изображение плана этажа'})
+  updateFloorImage(@Query('id') id: number, @UploadedFile() file: Express.Multer.File) {
+    return this.officesService.updateFloorImage(id, file);
+  }
   
   @ApiOperation({ summary: 'Создание рабочего места' })
   @ApiResponse({status: 200, type: Workplace})

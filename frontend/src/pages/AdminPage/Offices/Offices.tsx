@@ -10,6 +10,10 @@ import cn from 'classnames';
 import Button from '../../../components/UI_UX/Button/Button.tsx';
 import ModalBasis from '../../../components/Modals/ModalBasis/ModalBasis.tsx';
 import EditOffices from '../../../components/Modals/EditOffices/EditOffices.tsx';
+import { BASE_URL } from '../../../networking/http';
+import { UploadOutlined } from '@ant-design/icons';
+import { Button as AntdButton, message, Upload } from 'antd';
+import type { RcFile, UploadProps } from 'antd/es/upload/interface';
 
 
 function Offices() {
@@ -21,7 +25,9 @@ function Offices() {
   const windowDelFloor = useRef<HTMLDivElement>(null);
   const [candidateDelFloor, setCandidateDelFloor] = useState<IFloor | null>(null);
   const [selectedFloorId, setSelectedFloorId] = useState<number | null>(null);
+  const [currentFloorImage, setCurrentFloorImage] = useState<string | null>(null);
   const [activeModalEOF, setActiveModalEOF] = useState(false);
+  const [uploading, setUploading] = useState(false); // состояние загрузки для input[file]
   
   
   // получение всей информации про офисы
@@ -39,12 +45,13 @@ function Offices() {
   }, [getOffices]);
   
   const getOfficeBySelected = useCallback(() => {
-    for (const office of offices) {
-      if (office.id === selectedOffice) {
-        return office;
-      }
-    }
-    return null;
+    // for (const office of offices) {
+    //   if (office.id === selectedOffice) {
+    //     return office;
+    //   }
+    // }
+    // return null;
+    return offices.find((office) => office.id === selectedOffice);
   }, [offices, selectedOffice]);
   
   
@@ -132,8 +139,8 @@ function Offices() {
     if (windowDelFloor.current) {
       windowDelFloor.current.classList.remove(styles['offices__floor-del_active']);
     }
-    
     setCandidateDelFloor(null);
+    setSelectedFloorId(null);
   };
   
   // Обработчик выбора этажа
@@ -158,7 +165,10 @@ function Offices() {
           <button
             key={floor.id}
             className={cn('btn-reset', styles['offices__floor'])}
-            onClick={() => handleFloorSelect(floor)}
+            onClick={() => {
+              setCurrentFloorImage(floor.image || null);
+              handleFloorSelect(floor);
+            }}
             onContextMenu={(e) => showWindowDelFloor(e, floor)}
           >{floor.level}</button>
         ))
@@ -185,18 +195,91 @@ function Offices() {
   };
   
   
+  // const setFloorImage = async (e: React.ChangeEvent<HTMLInputElement>) => {
+  //   if (!e.target.files || !selectedFloorId) return;
+  //   const formData = new FormData();
+  //   formData.append('image', e.target.files[0]);
+  //   try {
+  //     const res = await OfficesService.updateFloorImage(selectedFloorId, formData);
+  //     const updatedFloor = res.data as IFloor;
+  //     setCurrentFloorImage(updatedFloor.image || null);
+  //     await getFloors();
+  //   } catch (error) {
+  //     console.error('Error updating floor image:', error);
+  //   } finally {
+  //     e.target.value = ''; // Сброс input для возможности повторной загрузки того же файла
+  //   }
+  // };
+  
+  
+  const uploadProps: UploadProps = {
+    name: 'image',
+    action: 'image/*',
+    showUploadList: false, // Скрываем список файлов
+    className: styles['offices__upload'],
+    beforeUpload: (file: RcFile) => {
+      // Проверка типа файла
+      const isImage = file.type.startsWith('image/');
+      if (!isImage) {
+        message.error('Можно загружать только изображения!');
+      }
+      return isImage;
+    },
+    customRequest: async ({ file, onSuccess, onError }) => {
+      if (!selectedFloorId) {
+        onError!(new Error('Этаж не выбран'));
+        return;
+      }
+      try {
+        setUploading(true);
+        const formData = new FormData();
+        formData.append('image', file as Blob);
+        
+        // Используем ваш сервис для отправки
+        const response = await OfficesService.updateFloorImage(
+          selectedFloorId,
+          formData
+        );
+        
+        const updatedFloor = response.data as IFloor;
+        setCurrentFloorImage(updatedFloor.image || null);
+        
+        // Обновляем список этажей
+        setFloors(prev =>
+          prev.map(f => f.id === updatedFloor.id ? updatedFloor : f)
+        );
+        
+        onSuccess!(response.data, new XMLHttpRequest());
+        message.success('Изображение успешно загружено');
+      } catch (error) {
+        console.error('Ошибка загрузки:', error);
+        onError!(new Error('Ошибка загрузки'));
+        message.error('Ошибка при загрузке изображения');
+      } finally {
+        setUploading(false);
+      }
+    }
+    // onChange(info) {
+    //   // Можно добавить дополнительную логику отслеживания статуса
+    // },
+  };
+  
+  
   return (
     <div>
       <ModalBasis isActive={activeModalEOF} setActive={setActiveModalEOF}>
         <EditOffices setClose={setActiveModalEOF} refresh={getOffices} offices={offices}/>
       </ModalBasis>
-      
       <div className={styles['offices__offices']}>
         <SelectOffice
           className={styles['offices__select']}
           placeholder={'Выберите оффис для настройки'}
           data={offices}
-          setFun={setSelectedOffice}
+          setFun={(id: number) => {
+            setSelectedFloorId(null);
+            setCurrentFloorImage(null);
+            setSelectedOffice(id);
+          }}
         />
         <Button className={cn('btn-reset', styles['offices__edit'])} onClick={() => setActiveModalEOF(true)}>
           <svg className={styles['offices__edit-icon']} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
@@ -205,11 +288,29 @@ function Offices() {
         </Button>
       </div>
       {isLoading ? (
-        <h3 className={'offices__loading'}>Загрузка...</h3>
+        <h3 className={styles['offices__loading']}>Загрузка...</h3>
       ) : (
         <>
+          {selectedFloorId && (
+            <Upload className={styles['offices__upload']} {...uploadProps}>
+              <AntdButton
+                icon={<UploadOutlined/>}
+                disabled={!selectedFloorId || uploading}
+                loading={uploading}
+                className={styles['offices__upload-button']}
+              >
+                {uploading ? 'Загрузка...' : 'Загрузить план этажа'}
+              </AntdButton>
+            </Upload>
+          )}
           {drawFloors()}
-          <CanvasAdmin workplaces={workplaces} onUpdate={saveWorkplacesChanges} refresh={() => getWorkplaces(selectedFloorId || null)} floorId={selectedFloorId}/>
+          <CanvasAdmin
+            workplaces={workplaces}
+            floorImage={`${BASE_URL}static/${currentFloorImage}`}
+            onUpdate={saveWorkplacesChanges}
+            refresh={() => getWorkplaces(selectedFloorId || null)}
+            floorId={selectedFloorId}
+          />
         </>
       )}
     </div>

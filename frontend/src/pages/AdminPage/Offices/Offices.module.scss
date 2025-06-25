@@ -29,6 +29,15 @@
     color: var(--cwhite);
   }
 
+  &__upload-button {
+    margin-bottom: 30px;
+
+    &:disabled {
+      color: #d9d9d9;
+      background: rgba(126, 126, 126, 0.61);
+    }
+  }
+
   &__floors {
     position: relative;
     display: flex;
